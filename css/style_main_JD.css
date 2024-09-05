@@ -1,0 +1,7 @@
+@import url(style_main.css);
+
+.banner {
+    background: url(https://images2.alphacoders.com/126/1260061.jpg);
+    background-size: cover;
+    width: 100%;
+}

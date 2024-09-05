@@ -1,0 +1,385 @@
+@import url(style_profile.css);
+
+body {
+    overflow: visible;
+}
+
+.master {
+    position: relative;
+}
+.container {
+    padding: 0 3em;
+}
+
+.header {
+    height: 70px;
+    position: sticky;
+    z-index: 2;
+}
+
+.header .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.headerLeft a img {
+    width: 93px;
+    display: inline-block;
+}
+
+.headerLeft ul li {
+    display: inline-block;
+}
+
+.headerLeft li:not(:last-child){
+    margin-right: 20px;
+}
+
+.headerLeft li a,.headerRight a {
+    color: #e5e5e5; 
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.headerLeft li a.logo {
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+.headerLeft li a.acti {
+    font-weight: bold;
+    cursor:default;
+    color: #fff; 
+}
+
+.headerLeft li a.acti:hover {
+    color: #fff;
+}
+
+.headerLeft li:not(:first-child){
+    position: relative;
+    top: -8px;
+}
+
+.headerLeft li a:hover,.headerRight a:hover  {
+    color: #b3b3b3;
+}
+
+.headerRight {
+    float: right;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+}
+
+.headerRight .rt_elem:not(:last-child){
+    margin-right: 25px;
+}
+.headerRight .rt_elem #search {
+    width: 23px;
+    display: inline-block;
+}
+
+.headerRight .rt_elem #notif {
+    width: 20px;
+    display: inline-block;
+}
+
+.headerRight .rt_elem #avatar {
+    width: 32px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.headerRight .rt_elem .acc_drop {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.headerRight .rt_elem .acc_drop span.triangle,.triangle{
+    border-color: #fff  transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    margin-left: 10px;
+    height: 0;
+    transition: 0.2s;
+}
+
+.rt_elem .acc_drop:hover .triangle {
+    transform: rotate(180deg);
+}
+
+.dr-tri {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+}
+
+#dtri {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.acc_drop:hover .dropdown_menu {
+    display: block;
+}
+
+.dropdown {
+    width: 218px;
+    margin-top: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0.3px solid #222;
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+.dropdown .dr-tri {
+    text-align: right;
+}
+
+.dropdown ul.other {
+    padding: 10px 0 5px;
+}
+
+.dropdown .menuItem {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown li {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.dropdown .menuItem a{
+    color: #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .menuItem a:hover span {
+    text-decoration: underline;
+}
+
+.dropdown .menuItem img {
+    display: inline-block;
+    width: 32px;
+    border-radius: 4px;
+}
+
+.dropdown .menuItem span {
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+
+
+.dropdown ul.setting {
+    padding: 8px 5px;
+}
+
+.dropdown .setting .menuItem img {
+    width: 24px;
+}
+
+.dropdown .setting .menuItem span {
+    font-size: 14px;
+    top: -8px;
+}
+
+.signout {
+    text-align: center;
+}
+
+.dropdown ul:not(:first-child) {
+    border-top: 1px solid #666;
+}
+
+.signout a{
+    display: inline-block;
+    padding: 10px 0;
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.signout a:hover{
+    text-decoration: underline;
+}
+
+.banner {
+    height: 690px;
+    background-image: url(../Images/ban.jpg);
+    background-size: cover;
+    width: 100%;
+    margin-top: -69px;
+    position: relative;
+}
+
+.banner .blk_gradient {
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.8) , transparent 50%);
+    height: inherit;
+}
+
+
+.ban_flex {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+}
+
+
+.banner .ban_info p {
+    margin: 25px 0;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 17px;
+}
+
+.banner .ban_info .ban_ops {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner .ban_info .ban_ops #play_but {
+    padding: 0.5em 1.5em ;
+    background-color: #e5e5e5;
+    color: #000;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.banner .ban_info .ban_ops #play_but:hover , .banner .ban_info .ban_ops #info_but:hover{
+    opacity: 0.8;
+}
+
+.banner .ban_info .ban_ops #info_but{
+    padding: 0.5em 1.5em ;
+    background-color: #767677;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.banner .ban_info .ban_ops #ft , #sd{
+    display: flex;
+}
+.banner .ban_info .ban_ops a #play {
+    background: url(../Images/play.svg);
+    background-size: cover;
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+.banner .ban_info .ban_ops a #info {
+    background: url(../Images/info.png);
+    background-size: cover;
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.banner .ban_ops_right {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+}
+
+.banner .ban_ops_right div {
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.banner .ban_ops_right img{
+    width: 18px;
+    display: inline-block;
+    padding-top: 9px;
+}
+
+.banner .ban_ops_right span {
+    color: #fff;
+    padding: 8px 20px;
+    padding-right: 60px;
+    background-color: rgba(51,51,51,0.6);
+    border-left: 3px solid #767677;
+}
+.carousel {
+    height: 888px;
+    position: relative;
+    color: #e5e5e5;
+}
+
+.gradient{
+    background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,0.15) 15%,hsla(0,0%,8%,0.35) 30%,hsla(0,0%,8%,0.55) 55%,#141414 70%,#141414);
+    position: absolute;
+    top: -124px;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+}
+
+.carousel h3{
+    padding-left: 4%;
+    padding-bottom: 10px;
+}
+.carousel .tv, .india {
+    /* height: 222px; */
+    position: absolute;
+    top: -12%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carousel .caro_list {
+    padding: 0 4%;
+    position: relative;
+}
+
+.carousel a{
+    margin-right: 0.4vw;;
+}
+
+.carousel .caro_item{
+    box-sizing: border-box;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+}
+
+.carousel .caro_item img{
+    width: 100%;
+}
+
+.carousel .india {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 10%;
+}
+
+
+
